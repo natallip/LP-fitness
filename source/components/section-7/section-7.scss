@@ -1,0 +1,112 @@
+.section-7 {
+  background: #000 url("../images/img14.jpg") no-repeat 0% 50%/cover;
+  padding-bottom: 100px;
+  @include media1200 {
+    padding-bottom: 117px;
+  }
+  @include media768 {
+    padding-bottom: 80px;
+  }
+  .section__title-wrap {
+    justify-content: center;
+  }
+  &__wrap {
+    width: 1200px;
+    margin: 0 auto;
+    @include media1200 {
+      width: 768px;
+    }
+    @include media768 {
+      width: 320px;
+    }
+  }
+  .owl-item {
+    opacity: .3;
+    .variant__btn {
+      display: none;
+    }
+  }
+  .owl-item.active.center {
+    opacity: 1;
+    .variant__btn {
+      display: flex;
+    }
+  }
+}
+.variants {
+  display: flex;
+  justify-content: space-between;
+
+  .variant {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(#555, .4);
+    padding: 42px 33px 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    @include media1200 {
+      padding: 25px 20px;
+      width: 95%;
+      margin: 0 10px 50px;
+      min-height: 500px;
+    }
+    @include media768 {
+      margin: 0;
+    }
+    &__title {
+      font-size: 21px;
+      font-family: 'Rubik-MediumItalic';
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      @include media768 {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+    }
+    &__info {
+      line-height: 1.35;
+      margin-bottom: 35px;
+      flex-grow: 1;
+      @include media768 {
+        margin-bottom: 20px;
+      }
+    }
+    &__descr {
+      font-family: 'Rubik-MediumItalic';
+      font-size: 15px;
+      line-height: 1.4;
+      margin-bottom: 35px;
+      flex-grow: 1;
+    }
+    &__text {
+      margin-bottom: 10px;
+    }
+    &__cost {
+      font-family: 'Rubik-BoldItalic';
+      font-size: 28px;
+      margin-bottom: 30px;
+      @include media768 {
+        margin-bottom: 16px;
+      }
+    }
+    &__some {
+      font-family: 'Rubik-MediumItalic';
+      margin-bottom: 40px;
+      font-size: 15px;
+    }
+    &__btn {
+      font-size: 14px;
+      margin-bottom: -80px;
+      @include media768 {
+        margin-bottom: 0;
+      }
+      .btn-accent {
+        @include media768 {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+mixin section-10
+    section.section.section-10#section-10
+        .container
+            .section__wrap
+                .section__col
+                    h2.title Создаем дизайн-проект
+                    .section-10__text.block-text
+                        p Наши дизайнеры создадут индивидуальный проект под ваше помещение. Они знают, как сделать функциональным, удобным и вместительным даже маленький зал.
+                        p Дизайнеры учтут все тонкости: от зонирования, маршрутов гостей до сантехники и эргономичной расстановки оборудования.
+                    .section-10__btn
+                        button.btn-accent.btn-accent--small
+                            span Узнать больше
+
+        .section__col
+            .section-10__photos.photos.owl-carousel.owl-theme#slider-photos
+                each item in data.photos
+                    .photo__img(style=`background-image: url(images/${item})`)
+

@@ -1,0 +1,30 @@
+.section-13 {
+  background: #000 url("../images/img14.jpg") no-repeat center/cover;
+  @include media1200 {
+    display: flex;
+    justify-content: center;
+  }
+  @include media768 {
+    padding-bottom: 60px;
+  }
+  .title {
+    margin-bottom: 90px;
+    font-size: 50px;
+    max-width: 500px;
+    @include media1200 {
+      font-size: 34px;
+      max-width: 100%;
+      margin-bottom: 50px;
+    }
+    @include media768 {
+      font-size: 26px;
+    }
+  }
+  &__form {
+    @include media1200 {
+      margin-bottom: 40px;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

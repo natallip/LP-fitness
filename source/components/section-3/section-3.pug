@@ -1,0 +1,21 @@
+mixin section-3
+    section.section.section--dark.section-3#section-3
+        .container
+            .section__wrap
+                .section__col
+                    .section__title-wrap
+                        h2.title Это должен знать каждый,
+                        .text-accent
+                            span кто планирует работать по франшизе
+                    .section-3__text
+                        p Вы решили открыть собственное дело.
+                        p Определились с направлением и хотите работать по франчайзингу.
+                        p Сейчас перед Вами стоит сложный выбор из всего многообразия предложений на рынке.
+                        p Эти советы помогут Вам сориентироваться на этапе старта и понять, на какие критерии важно обратить внимание при выборе франшизы!
+                    a(href="#").section-3__link Узнать больше о подводных камнях
+
+                .section__col
+                    div.slider-learn#slider-learn.owl-carousel.owl-theme
+                        each item in data.sliderLearn
+                            +item-slider(item.icon, item.img, item.title, item.text)
+

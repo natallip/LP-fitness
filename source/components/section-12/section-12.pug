@@ -1,0 +1,19 @@
+mixin section-12
+    section.section.section-12#section-12
+        .container
+            .section__wrap
+                .section__col
+                    h2.title Удобное програмное обеспечение
+                    .section-12__slider
+                        .slider-programs.owl-carousel.owl-theme#slider-programs
+                            each item, i in data.programs
+                                .program
+                                    .program__number
+                                        span= i+1
+                                    h3.program__title= item.title
+                                    .program__text= item.text
+                .section__col
+                    .section-12__img
+                        img(src="images/img8.jpg")
+
+

@@ -1,0 +1,13 @@
+mixin footer
+    footer.footer
+        .container.footer__wrap
+            .footer__logo.logo
+                img.logo__img(src="images/logo.png")
+            .footer__contacts
+                .footer__number 8 (800) 355 25 35
+                .footer__adress Челябинск, Совецкая, 58
+            .footer__socials
+                ul.socials
+                    each item in data.socials
+                        li.socials__item
+                            +svg(item)

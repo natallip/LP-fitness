@@ -1,0 +1,23 @@
+mixin section-5
+    section.section.section--dark.section-5#section-5
+        .container
+            .section__title-wrap
+                h2.title Как открыть бизнес-студию
+                .text-accent
+                    span за 2 месяца
+            .section-5__wrap
+                .section-5__wrap-number
+                    ul.section-5__numbers
+                        - for (var i = 1; i < 6; i++)
+                            li.section-5__number
+                                span= i
+                .section-5__wrap-content
+                    ul.section-5__logic.list.list--dark
+                        each item in data.logic
+                            li.list__li.list__li--dark
+                                +item-small(item.icon, item.text)
+                    .section-5__info
+                        button.btn-accent.btn-accent--small
+                            span Открыть свою фитнес-студию
+
+

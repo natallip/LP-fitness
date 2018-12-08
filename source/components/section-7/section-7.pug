@@ -1,0 +1,19 @@
+mixin section-7
+    section.section.section--dark.section-7#section-7
+        .container
+            .section__title-wrap
+                h2.title Варианты сотрудничества
+        .section-7__wrap
+            .section-7__variants.variants.owl-carousel.owl-theme#slider-variants
+                each item in data.variants
+                    .variant
+                        h4.variant__title= item.title
+                        p.variant__info= item.info
+                        .variant__descr= item.descr
+                        .variant__text= item.text
+                        .variant__cost= item.cost
+                        .variant__some= item.some
+                        .variant__btn
+                            button.btn-accent.btn-accent--small
+                                span Узнать подробнее
+

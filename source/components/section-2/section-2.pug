@@ -1,0 +1,17 @@
+mixin section-2
+    section.section.section-2#section-2
+        .container
+            .section__title-wrap
+                h2.title Что вы получите
+                .text-accent
+                    span при покупке франшизы
+            .section-2__wrap
+                .section-2__profits.list#slider-profits.owl-carousel.owl-theme
+                    each item in data.profits
+                        .list__li
+                            +item(item.icon, item.title, item.text)
+                .section-2__info
+                    .section-2__info-text Узнайте больше <br> о франшизе Персона
+                    button.btn-accent.btn-accent--small
+                        span Узнать больше
+

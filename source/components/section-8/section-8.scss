@@ -1,0 +1,115 @@
+.section-8 {
+  @include media1200 {
+    padding-bottom: 100px;
+  }
+  @include media768 {
+    padding-bottom: 80px;
+  }
+  .title {
+    margin-bottom: 50px;
+    @include media768 {
+      margin-bottom: 30px;
+    }
+  }
+  &__wrap-slider {
+    width: 1200px;
+    margin: 0 auto;
+    @include media1200 {
+      width: 768px;
+    }
+    @include media768 {
+      width: 320px;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    letter-spacing: 0;
+    max-width: 550px;
+    margin-bottom: 30px;
+    @include media1200 {
+      display: none;
+    }
+    p {
+      margin: 12px 0;
+      line-height: 1.25;
+    }
+  }
+}
+.about {
+  &__img {
+    width: 360px;
+    height: 360px;
+    overflow: hidden;
+    flex-grow: 0;
+    margin: 0 25px 20px;
+    background-size: cover;
+    background-position: 50% 50%;
+    @include media768 {
+      width: 240px;
+      height: 240px;
+      margin: 0 10px 20px;
+    }
+  }
+  .slick-dots {
+    justify-content: center;
+  }
+}
+.info {
+  @include media1200 {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 50px;
+  }
+  @include media768 {
+    flex-direction: column;
+    align-items: center;
+  }
+  &__icon {
+    position: relative;
+    margin-left: 40px;
+    margin-top: 4px;
+    @include media1200 {
+      margin: 0 30px 0 0;
+    }
+    @include media768 {
+      margin-bottom: 15px;
+    }
+    svg {
+      width: 110px;
+      height: 110px;
+      fill: $accent;
+      @include media1200 {
+        width: 80px;
+        height: 80px;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 200px;
+      height: 210px;
+      transform: skewX(-20deg);
+      background: #eee;
+      position: absolute;
+      top: 50%;
+      left: -4%;
+      z-index: -1;
+      @include media1200 {
+        display: none;
+      }
+    }
+  }
+  &__text {
+    font-family: 'Rubik-MediumItalic';
+    font-size: 22px;
+    margin-left: 85px;
+    margin-top: 45px;
+    line-height: 1.5;
+    @include media1200 {
+      margin: 0;
+    }
+    @include media768 {
+      font-size: 18px;
+    }
+  }
+}

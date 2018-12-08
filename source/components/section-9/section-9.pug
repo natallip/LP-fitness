@@ -1,0 +1,18 @@
+mixin section-9
+    section.section.section--dark.section-9#section-9
+        .container
+            .section__wrap
+                .section__col
+                    h2.title Почему стоит открывать именно фитнес-студию
+                    div.slider-advantage.owl-carousel.owl-theme#slider-advantage
+                        each item in data.sliderAdvantage
+                            +item-slider-noImg (item.icon, item.title, item.text)
+                .section__col
+                    h5.section-9__title-graphs Распределение международных фитнес-студий
+                    ul.graphs
+                        each item in data.graphs
+                            li.graph
+                                .graph__percent= item.percent + "%"
+                                .graph__col(class=item.active, style=`height:${item.percent*9}px;`)
+                                .graph__country= item.country
+

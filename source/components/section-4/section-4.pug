@@ -1,0 +1,15 @@
+mixin section-4
+    section.section.section-4#section-4
+        .container
+            .section__title-wrap
+                h2.title Поддержка
+                .text-accent
+                    span которую получает франчайзи
+        .section-4__wrap
+            .section-4__support.support.responsive#slider-support.owl-carousel.owl-theme
+                each item in data.support
+                    .support__item
+                        .support__icon
+                            +svg(item.icon)
+                        .support__text= item.text
+

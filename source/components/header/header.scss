@@ -1,0 +1,53 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  &__wrap {
+    display: flex;
+    padding-top: 20px;
+  }
+  &__logo {
+    margin-right: 20%;
+    @include  media768 {
+      margin-right: 10%;
+    }
+  }
+}
+.phone {
+  display: flex;
+  align-items: center;
+  &__number {
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Rubik-MediumItalic';
+    margin-right: 35px;
+    @include media768 {
+      display: none;
+    }
+  }
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 35px;
+    background-color: $accent;
+    transform: skewX(-20deg);
+    cursor: pointer;
+  }
+  .icon-phone {
+    width: 18px;
+    height: 18px;
+    fill: #fff;
+    transform: skewX(20deg);
+  }
+}
+.logo {
+  width: 200px;
+  @include media768 {
+    width: 120px;
+  }
+  &__img {
+    fill: $accent;
+  }
+}

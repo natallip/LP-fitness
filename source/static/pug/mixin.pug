@@ -1,0 +1,33 @@
+mixin svg (name, mod)
+    - mod = mod || ' '
+    svg(class="icon icon-" + name + ' ' + mod)
+        use(xlink:href="css/symbol/sprite.svg#" + name)
+
+mixin item (icon, title, text)
+    .item
+        .item__icon
+            +svg(icon)
+        h4.item__title= title
+        p.item__text= text
+
+mixin item-small (icon, text)
+    .item-small
+        .item-small__icon
+            +svg(icon)
+        p.item-small__text= text
+
+mixin item-slider (icon, img, title, text)
+    div.slider__item
+        .slider__icon
+            +svg(icon)
+        .slider__img
+            img(src="../images/" + img)
+        h3.slider__title= title
+        p.slider__text= text
+
+mixin item-slider-noImg (icon, title, text)
+    div.slider__item.slider__img--noImg
+        .slider__icon
+            +svg(icon)
+        h3.slider__title= title
+        p.slider__text= text

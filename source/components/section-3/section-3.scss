@@ -1,0 +1,40 @@
+.section-3 {
+  background: #000 url("../images/img13.jpg") no-repeat 0% 50%/contain;
+  @include media1200 {
+    padding-bottom: 180px;
+    background-size: cover;
+  }
+  @include media768 {
+    padding-bottom: 160px;
+  }
+  &__text {
+    font-size: 18px;
+    flex-grow: 2;
+    p {
+      margin: 12px 0;
+      line-height: 1.4;
+    }
+    @include media1200 {
+      display: none;
+    }
+  }
+  &__link {
+    font-family: 'Rubik-BoldItalic';
+    font-size: 19px;
+    text-transform: uppercase;
+    color: $accent;
+    text-decoration: underline;
+    cursor: pointer;
+    @include media1200 {
+      position: absolute;
+      bottom: -100px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+    }
+    @include media768 {
+      font-size: 15px;
+    }
+  }
+}

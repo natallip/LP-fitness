@@ -1,0 +1,12 @@
+mixin section-6
+    section.section.section-6#section-6
+        .container
+            .section__title-wrap
+                h2.title Что привлекает партнеров?
+            .section-6__wrap
+                .section-6__partners.list.owl-carousel.owl-theme#slider-partners
+                    each item in data.partners
+                        .list__li
+                            +item(item.icon, "", item.text)
+
+

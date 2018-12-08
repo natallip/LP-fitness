@@ -1,0 +1,60 @@
+$duration: 0.2s;
+$timing-function: linear;
+$buttunCloseColor: #000;
+$buttonCloseSize: 14px;
+$buttonCloseTranslation: 5.5px;
+
+.sb-popup {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: -100vh;
+    opacity: 0;
+    transition: opacity $duration $timing-function $duration, top 0s 0.4s;
+    &__content {
+        margin: -100px auto 0 auto;
+        width: 100px;
+        padding: 10px;
+        background-color: #c5c5c5;
+        border-radius: 5px;
+        box-shadow: 0 0 10px #000;
+        transition: margin-top $duration $timing-function;
+    }
+    &__button--close {
+        width: $buttonCloseSize;
+        height: $buttonCloseSize;
+        position: relative;
+        cursor: pointer;
+        //background: rgba(0,0,0,.2);
+
+        &:before,
+        &:after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 3px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: $buttunCloseColor;
+        }
+        &:before {
+            transform: translateY($buttonCloseTranslation) rotate(45deg);
+        }
+        &:after{
+            transform: translateY($buttonCloseTranslation) rotate(-45deg);
+        }
+    }
+}
+
+.sb-popup.sb-popup--active {
+    top: 0;
+    opacity: 1;
+    transition: opacity 0.2s $timing-function;
+    .sb-popup__content {
+        margin-top: 40px;
+        transition: margin-top $duration $timing-function 0.2s;
+    }
+}

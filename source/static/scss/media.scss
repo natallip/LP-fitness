@@ -1,0 +1,48 @@
+//320, 480, 768, 980, 1200, 1400, 1600
+@mixin media320 {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin media480 {
+  @media screen and (max-width: 480px) {
+    @content;
+  }
+}
+
+@mixin media768 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin media980 {
+  @media screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin media1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media1400 {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin media1600 {
+  @media screen and (max-width: 1600px) {
+    @content;
+  }
+}
+
+@mixin media {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}

@@ -1,0 +1,21 @@
+mixin section-8
+    section.section.section-8#section-8
+        .container
+            .section__wrap
+                .section__col
+                    h2.title Что такое фитнес-студия?
+                    .section-8__text
+                        p Это главный тренд в индустрии фитнеса.
+                        p В фитнес-студию клиенты приходят достигать своих целей, исправлять и решать проблемы, улучшать качество своей жизни.
+                        p В фитнес-студию не нужно покупать клубную карту, как в обычные фитнес-центры, здесь клиенты платят только за свой результат - групповые и персональные тренировки с инструктором.
+                .section__col
+                    .info
+                        .info__icon
+                            +svg("info")
+                        p.info__text Фитнес-студия максимально подходит для тех, кто ценит свое время и деньги, кто действительно хочет сделать свое тело сильным и красивым, а организм - здоровым!
+
+        .section-8__wrap-slider
+            .section-8__about.about.owl-carousel.owl-theme#slider-about
+                each item in data.about
+                    .about__img(style=`background-image: url(images/${item})`)
+
